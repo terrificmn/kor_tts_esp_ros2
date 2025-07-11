@@ -1,0 +1,23 @@
+from espnet2.bin.tts_inference import Text2Speech
+from espnet2.utils.types import str_or_none
+import argparse, os, time, torch
+import scipy.io.wavfile
+import shutil
+
+text2speech = Text2Speech.from_pretrained(
+    vocoder_tag=str_or_none(vocoder_tag),
+    model_file = str_or_none(tag),
+    train_config = str_or_none(config),
+)
+
+with torch.no_grad():
+        start = time.time()
+        wav = text2speech(input_text)["wav"]
+    rtf = (time.time() - start) / (len(wav) / text2speech.fs)
+    print(f"RTF = {rtf:5f}")
+    out_file_name = args.out+"/"+str(i)+".wav"
+    scipy.io.wavfile.write(out_file_name, text2speech.fs , wav.view(-1).cpu().numpy())
+
+
+
+# https://huggingface.co/songhee/kss_tts_train_full_band_vits_raw_phn_korean_cleaner_korean_jaso

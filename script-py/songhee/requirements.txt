@@ -1,0 +1,5 @@
+espnet
+# You might also need specific PyTorch versions if ESPnet has a strict requirement
+# torch==X.Y.Z
+# torchvision==X.Y.Z
+# torchaudio==X.Y.Z

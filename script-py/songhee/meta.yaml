@@ -1,0 +1,8 @@
+espnet: 0.10.3a2
+files:
+  model_file: exp/vits_44100/1000epoch.pth
+python: "3.9.7 (default, Sep 16 2021, 13:09:58) \n[GCC 7.5.0]"
+timestamp: 1634018424.581246
+torch: 1.9.0+cu102
+yaml_files:
+  train_config: exp/vits_44100/config.yaml
