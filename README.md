@@ -42,9 +42,7 @@ ctl.!default {
 ## pre-trained 모델 
 모델 파일을 다운로드 후에 script-py/songhee 디렉토리 이하에 복사  
 
-
-TODO: link update 
-
+[huggingface 에서 다운로드](https://huggingface.co/songhee/kss_tts_train_full_band_vits_raw_phn_korean_cleaner_korean_jaso/tree/main)   
 
 ## 빌드 
 `colcon build` 또는 
@@ -97,5 +95,5 @@ ros2 topic pub /kor_tts std_msgs/msg/String "data: '안녕하세요. 날씨가, 
 
 
 ## 라이센스
-cc NC 4.0
-
+[CC-BY-NC-SA-4.0](https://spdx.org/licenses/CC-BY-NC-SA-4.0)  
+Creative Commons Attribution Non Commercial Share Alike 4.0    
